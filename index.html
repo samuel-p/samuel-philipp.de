@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="css/supersized.css" type="text/css" media="screen"/>
     <link rel="stylesheet" href="theme/supersized.shutter.css" type="text/css" media="screen"/>
 
-    <script type="text/javascript" src="js/vendor/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery-2.2.4.min.js"></script>
     <script type="text/javascript" src="js/vendor/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.flip.min.js"></script>
 
     <script type="text/javascript" src="js/vendor/supersized.3.2.7.min.js"></script>
     <script type="text/javascript" src="theme/supersized.shutter.min.js"></script>
 
     <script type="text/javascript">
-        jQuery(function ($) {
+        $(document).ready(function () {
             $.supersized({
                 // Functionality
                 slideshow: 1,			// Slideshow on/off
@@ -65,26 +66,109 @@
             });
         });
     </script>
+    <script>
+        $(document).ready(function () {
+            $('.list').addClass('hide');
+
+            var card = $('#card');
+            card.css('cursor', 'pointer');
+            card.find('.back').removeClass('hide');
+            card.flip({
+                trigger: 'click',
+                speed: 500,
+                reverse: true
+            });
+        });
+    </script>
+
+    <style>
+        body {
+            color: #fff;
+        }
+
+        .logo {
+            max-width: 128px;
+            max-height: 128px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            border: 1px solid #222222;
+        }
+
+        #icon {
+            position: fixed;
+            right: 1rem;
+            bottom: 1rem;
+            width: 128px;
+            height: 128px;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .list {
+            margin: 5% auto;
+            text-align: center;
+        }
+
+        .list .item {
+            margin-bottom: 1rem;
+        }
+
+        .list .item img {
+            width: 256px;
+            border: 1px solid #fff;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+        }
+    </style>
+
     <!-- Piwik -->
     <script type="text/javascript">
         var _paq = _paq || [];
         _paq.push(["setDomains", ["*.samuel-philipp.de"]]);
         _paq.push(['trackPageView']);
         _paq.push(['enableLinkTracking']);
-        (function() {
-            var u="//piwik.sp-codes.de/";
-            _paq.push(['setTrackerUrl', u+'piwik.php']);
+        (function () {
+            var u = "//piwik.sp-codes.de/";
+            _paq.push(['setTrackerUrl', u + 'piwik.php']);
             _paq.push(['setSiteId', '2']);
-            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript';
+            g.async = true;
+            g.defer = true;
+            g.src = u + 'piwik.js';
+            s.parentNode.insertBefore(g, s);
         })();
     </script>
-    <noscript><p><img src="//piwik.sp-codes.de/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+    <noscript><p><img src="//piwik.sp-codes.de/piwik.php?idsite=2" style="border:0;" alt=""/></p></noscript>
     <!-- End Piwik Code -->
 </head>
 <body>
 <!--Arrow Navigation-->
-<a id="prevslide" class="load-item"></a>
-<a id="nextslide" class="load-item"></a>
+<a id="prevslide" class="load-item hide"></a>
+<a id="nextslide" class="load-item hide"></a>
+
+<div class="list">
+    <div class="item">
+        <a href="https://www.sp-magic.de"><img src="img/sp-magic.png"/></a>
+    </div>
+    <div class="item">
+        <a href="https://www.sp-codes.de"><img src="img/sp-codes.png"/></a>
+    </div>
+</div>
+
+<div id="icon">
+    <div id="card">
+
+        <div class="front">
+            <img class="logo" src="img/samuel.png">
+        </div>
+        <div class="back hide">
+            <img class="logo" src="img/samuel.png">
+        </div>
+    </div>
+</div>
 </body>
 </html>
