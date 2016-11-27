@@ -270,7 +270,14 @@
 				
 				
 			}
-		    
+
+			if (api.getField('title') == 'sp-magic') {
+				$('#magician').fadeIn();
+				$('#developer').fadeOut();
+			} else if (api.getField('title') == 'sp-codes') {
+				$('#magician').fadeOut();
+				$('#developer').fadeIn();
+			}
 	 	},
 	 	
 	 	

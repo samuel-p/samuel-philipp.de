@@ -14,10 +14,12 @@
     <script type="text/javascript" src="js/vendor/jquery.flip.min.js"></script>
 
     <script type="text/javascript" src="js/vendor/supersized.3.2.7.min.js"></script>
-    <script type="text/javascript" src="theme/supersized.shutter.min.js"></script>
+    <script type="text/javascript" src="theme/supersized.shutter.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
+            $('#prevslide').removeClass('hide');
+            $('#nextslide').removeClass('hide');
             $.supersized({
                 // Functionality
                 slideshow: 1,			// Slideshow on/off
@@ -123,6 +125,27 @@
             -moz-border-radius: 7px;
             border-radius: 7px;
         }
+
+        #magician {
+            color: #000000;
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 15%;
+            font-family: "Daniel Black", cursive;
+            font-size: 50pt;
+        }
+
+        #developer {
+            color: #ffffff;
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%);
+            top: 50%;
+            font-family: "Courier New", monospace;
+            font-size: 50pt;
+            font-weight: bold;
+        }
     </style>
 
     <!-- Piwik -->
@@ -150,6 +173,9 @@
 <!--Arrow Navigation-->
 <a id="prevslide" class="load-item hide"></a>
 <a id="nextslide" class="load-item hide"></a>
+
+<h1 id="magician" style="display: none;">Zauberkünstler</h1>
+<h1 id="developer" style="display: none;">Softwareentwickler</h1>
 
 <div class="list">
     <div class="item">
