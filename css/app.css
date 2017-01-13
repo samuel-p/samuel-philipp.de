@@ -1,3 +1,91 @@
 #maximage div {
     cursor:pointer;
 }
+
+@font-face {
+    font-family: 'Pacifico';
+    src: local('Pacifico Regular'), url(../font/Pacifico-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Source Code';
+    src: local('Source Code Pro'), url(../font/SourceCodePro-Regular.ttf) format('truetype');
+}
+
+body {
+    color: #fff;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.logo {
+    max-width: 128px;
+    max-height: 128px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 1px solid #222222;
+}
+
+#icon {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 128px;
+    height: 128px;
+}
+
+.hide {
+    display: none;
+}
+
+.list {
+    margin: 5% auto;
+    text-align: center;
+}
+
+.list .item {
+    margin-bottom: 1rem;
+}
+
+.list .item img {
+    width: 512px;
+    border: 1px solid #fff;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+#magician h1 {
+    color: #000000;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15%;
+    font-family: "Pacifico", cursive;
+    font-size: 50pt;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+#developer h1 {
+    color: #ffffff;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    top: 50%;
+    font-family: "Source Code", monospace;
+    font-size: 50pt;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.list .magician {
+    color: #ffffff;
+    font-family: "Pacifico", cursive;
+    font-weight: normal;
+}
+
+.list .developer {
+    color: #ffffff;
+    font-family: "Source Code", monospace;
+    font-weight: bold;
+}
