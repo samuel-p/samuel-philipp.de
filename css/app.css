@@ -1,5 +1,5 @@
 #maximage div {
-    cursor:pointer;
+    cursor: pointer;
 }
 
 @font-face {
@@ -56,28 +56,30 @@ body {
     border-radius: 7px;
 }
 
-h1 {
-    color: #000000;
-    position: fixed;
-    font-size: 70pt;
-    font-weight: normal;
-    text-decoration: none;
-}
-
 #magician h1 {
     color: #000000;
+    position: fixed;
     left: 50%;
     transform: translateX(-50%);
     bottom: 15%;
     font-family: "Minotaur", cursive;
+    font-size: 70pt;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
 }
 
 #developer h1 {
     color: #ffffff;
+    position: fixed;
     left: 50%;
     transform: translate(-50%);
     top: 50%;
     font-family: "Minotaur", monospace;
+    font-size: 70pt;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
 }
 
 .list .magician {
@@ -89,5 +91,5 @@ h1 {
 .list .developer {
     color: #ffffff;
     font-family: "Minotaur", monospace;
-    font-weight: normal;
+    font-weight: bold;
 }
