@@ -3,13 +3,8 @@
 }
 
 @font-face {
-    font-family: 'Pacifico';
-    src: local('Pacifico Regular'), url(../font/Pacifico-Regular.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'Source Code';
-    src: local('Source Code Pro'), url(../font/SourceCodePro-Regular.ttf) format('truetype');
+    font-family: 'Minotaur';
+    src: local('Minotaur Phatte'), url(../font/minotaur.ttf) format('truetype');
 }
 
 body {
@@ -25,12 +20,19 @@ body {
     border: 1px solid #222222;
 }
 
-#icon {
+.icon {
     position: fixed;
-    right: 1rem;
-    bottom: 1rem;
     width: 128px;
     height: 128px;
+    bottom: 1rem;
+}
+
+.icon.right {
+    right: 1rem;
+}
+
+.icon.left {
+    left: 1rem;
 }
 
 .hide {
@@ -54,38 +56,38 @@ body {
     border-radius: 7px;
 }
 
-#magician h1 {
+h1 {
     color: #000000;
     position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 15%;
-    font-family: "Pacifico", cursive;
-    font-size: 50pt;
+    font-size: 70pt;
     font-weight: normal;
     text-decoration: none;
 }
 
+#magician h1 {
+    color: #000000;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15%;
+    font-family: "Minotaur", cursive;
+}
+
 #developer h1 {
     color: #ffffff;
-    position: fixed;
     left: 50%;
     transform: translate(-50%);
     top: 50%;
-    font-family: "Source Code", monospace;
-    font-size: 50pt;
-    font-weight: bold;
-    text-decoration: none;
+    font-family: "Minotaur", monospace;
 }
 
 .list .magician {
     color: #ffffff;
-    font-family: "Pacifico", cursive;
+    font-family: "Minotaur", cursive;
     font-weight: normal;
 }
 
 .list .developer {
     color: #ffffff;
-    font-family: "Source Code", monospace;
-    font-weight: bold;
+    font-family: "Minotaur", monospace;
+    font-weight: normal;
 }
