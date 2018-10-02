@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>Samuel Philipp</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="shortcut icon" href="img/samuel.png">
+
+    <link rel="stylesheet" href="css/app.css" type="text/css" media="screen"/>
+
+    <script type="text/javascript" src="js/vendor/jquery-2.2.4.min.js"></script>
+    <!--<script type="text/javascript" src="js/vendor/jquery.easing.min.js"></script>-->
+    <!--<script type="text/javascript" src="js/vendor/jquery.flip.min.js"></script>-->
+    <!--<script type="text/javascript" src="js/app.js"></script>-->
+
+    <style type="text/css">
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        #top-image {
+            background: url('img/sp-codes.png') no-repeat center center fixed;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 0;
+            height: 100%;
+            background-size: calc(100% + 50px);
+        }
+
+        #topper-image {
+            background: url('img/samuel-philipp_v2-overlay.png') no-repeat center center fixed;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 0;
+            height: 100%;
+            background-size: calc(100% + 50px);
+        }
+    </style>
+
+    <script type="application/javascript">
+        // $(document).ready(function () {
+        //     var movementStrength = 25;
+        //     var height = movementStrength / $(window).height();
+        //     var width = movementStrength / $(window).width();
+        //     $("#topper-image").mousemove(function (e) {
+        //         var pageX = e.pageX - ($(window).width() / 2);
+        //         var pageY = e.pageY - ($(window).height() / 2);
+        //         var newvalueX = width * pageX * -1 - 25;
+        //         var newvalueY = height * pageY * -1 - 50;
+        //         var newvalueX2 = width * pageX - 25;
+        //         var newvalueY2 = height * pageY - 50;
+        //         $('#top-image').css("background-position", newvalueX2 + "px     " + newvalueY2 + "px");
+        //         $('#topper-image').css("background-position", newvalueX + "px     " + newvalueY + "px");
+        //     });
+        // });
+        $(document).ready(function(){
+            var mouseX, mouseY;
+            var ww = $( window ).width();
+            var wh = $( window ).height();
+            var traX, traY;
+            $(document).mousemove(function(e){
+                mouseX = e.pageX;
+                mouseY = e.pageY;
+                traX = ((4 * mouseX) / ww) + 40;
+                traY = ((4 * mouseY) / wh) + 50;
+                console.log(traX);
+                $('#topper-image').css({
+                    "left": -traX + "%",
+                    "top": -traY + "%"
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="top-image"></div>
+<div id="topper-image"></div>
+</body>
+</html>
