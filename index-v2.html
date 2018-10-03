@@ -19,64 +19,56 @@
             margin: 0;
         }
 
-        #top-image {
-            background: url('img/sp-codes.png') no-repeat center center fixed;
+        .image {
+            background-repeat: no-repeat;
+            background-position: center center;
+            /*background-attachment: fixed;*/
+            background-size: cover;
             position: fixed;
-            top: 0;
-            width: 100%;
+            top: -25px;
+            left: -25px;
+            width: calc(100% + 50px);
+            height: calc(100% + 50px);
             z-index: 0;
-            height: 100%;
-            background-size: calc(100% + 50px);
+        }
+
+        #top-image {
+            background-image: url('img/sp-codes.png');
         }
 
         #topper-image {
-            background: url('img/samuel-philipp_v2-overlay.png') no-repeat center center fixed;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 0;
-            height: 100%;
-            background-size: calc(100% + 50px);
+            background-image: url('img/samuel-philipp_v2-overlay.png');
         }
     </style>
 
     <script type="application/javascript">
-        // $(document).ready(function () {
-        //     var movementStrength = 25;
-        //     var height = movementStrength / $(window).height();
-        //     var width = movementStrength / $(window).width();
-        //     $("#topper-image").mousemove(function (e) {
-        //         var pageX = e.pageX - ($(window).width() / 2);
-        //         var pageY = e.pageY - ($(window).height() / 2);
-        //         var newvalueX = width * pageX * -1 - 25;
-        //         var newvalueY = height * pageY * -1 - 50;
-        //         var newvalueX2 = width * pageX - 25;
-        //         var newvalueY2 = height * pageY - 50;
-        //         $('#top-image').css("background-position", newvalueX2 + "px     " + newvalueY2 + "px");
-        //         $('#topper-image').css("background-position", newvalueX + "px     " + newvalueY + "px");
-        //     });
-        // });
-        $(document).ready(function(){
+        $(document).ready(function () {
             var mouseX, mouseY;
-            var ww = $( window ).width();
-            var wh = $( window ).height();
-            var traX, traY;
-            $(document).mousemove(function(e){
+            var ww = $(window).width();
+            var wh = $(window).height();
+            var traX, traY, traX2, traY2;
+            $(document).mousemove(function (e) {
                 mouseX = e.pageX;
                 mouseY = e.pageY;
-                traX = ((4 * mouseX) / ww) + 40;
-                traY = ((4 * mouseY) / wh) + 50;
+                traX = (((50 * mouseX) / ww)) - 50;
+                traY = (((50 * mouseY) / wh)) - 50;
+                traX2 = (50 + traX) * -1;
+                traY2 = (50 + traY) * -1;
                 console.log(traX);
                 $('#topper-image').css({
-                    "left": -traX + "%",
-                    "top": -traY + "%"
+                    "left": traX + "px",
+                    "top": traY + "px"
+                });
+                $('#top-image').css({
+                    "left": traX2 + "px",
+                    "top": traY2 + "px"
                 });
             });
         });
     </script>
 </head>
 <body>
-<div id="top-image"></div>
-<div id="topper-image"></div>
+<div id="top-image" class="image"></div>
+<div id="topper-image" class="image"></div>
 </body>
 </html>
