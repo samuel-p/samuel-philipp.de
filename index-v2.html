@@ -1,12 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="" xmlns="" xml:lang="en" lang="en">
 
 <head>
     <title>Samuel Philipp</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <link rel="shortcut icon" href="img/samuel.png">
 
-    <link rel="stylesheet" href="css/app.css" type="text/css" media="screen"/>
+    <!--<link rel="stylesheet" href="css/app.css" type="text/css" media="screen"/>-->
 
     <script type="text/javascript" src="js/vendor/jquery-2.2.4.min.js"></script>
     <!--<script type="text/javascript" src="js/vendor/jquery.easing.min.js"></script>-->
@@ -20,6 +20,7 @@
         }
 
         .image {
+            display: block;
             background-repeat: no-repeat;
             background-position: center center;
             /*background-attachment: fixed;*/
@@ -38,6 +39,27 @@
 
         #topper-image {
             background-image: url('img/samuel-philipp_v2-overlay.png');
+        }
+
+        .headers {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            /*justify-content: stretch;*/
+            align-items: stretch;
+            /*align-content: stretch;*/
+        }
+
+        .headers .codes {
+            flex-grow: 1;
+        }
+
+        .headers .magic {
+            flex-grow: 1.8;
         }
     </style>
 
@@ -79,6 +101,16 @@
 </head>
 <body>
 <div id="top-image" class="image"></div>
-<div id="topper-image" class="image"></div>
+<code>
+    <svg id="topper-image" class="image" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         version="1.1" width="100%" height="100%" viewBox="0 0 2560 1440" preserveAspectRatio="xMidYMid slice">
+        <a xlink:href="//sp-codes.de" style="width: 100%; height: 100%;">
+            <path d="M 0,796 C 0,796 1330,480 2560,460 L 2560,0 L 0,0 Z" fill-opacity="0"></path>
+        </a>
+        <a xlink:href="//sp-magic.de" style="width: 100%; height: 100%;">
+            <path d="M 0,796 C 0,796 1330,480 2560,460 L 2560,1440 L 0,1440 Z" fill-opacity="0"></path>
+        </a>
+    </svg>
+</code>
 </body>
 </html>
