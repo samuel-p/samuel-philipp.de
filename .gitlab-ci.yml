@@ -1,0 +1,11 @@
+stages:
+  - build
+  - deploy
+
+deploy:
+  image: alpine
+  stage: deploy
+  before_script:
+    - apk add lftp
+  script:
+    - lftp -e "mirror -R ./ samuel-philipp.de/; bye" -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST
