@@ -2,6 +2,7 @@
 @import "~bootstrap/scss/bootstrap-reboot";
 @import "~bootstrap/scss/utilities/align";
 @import "~bootstrap/scss/utilities/spacing";
+@import "~bootstrap/scss/utilities/display";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
@@ -71,6 +72,20 @@ body {
   font-weight: bold;
   font-size: 5rem;
   text-shadow: 0 0 1rem #000000;
+}
+
+@include media-breakpoint-down(md) {
+  .headers .magician,
+  .headers .developer {
+    font-size: 4rem;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .headers .magician,
+  .headers .developer {
+    font-size: 3rem;
+  }
 }
 
 .headers a {
