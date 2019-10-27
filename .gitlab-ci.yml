@@ -2,10 +2,27 @@ stages:
   - build
   - deploy
 
+build:
+  image: node
+  stage: build
+  dependencies: []
+  before_script:
+    - rm package-lock.json
+  script:
+    - npm run build
+  cache:
+    paths:
+      - node_modules/
+  artifacts:
+    paths:
+      - dist/
+
 deploy:
   image: alpine
   stage: deploy
+  dependencies:
+    - build
   before_script:
-    - apk add lftp
+    - which lftp || ( apk --update add lftp )
   script:
     - lftp -e "mirror -R ./ samuel-philipp.de/; bye" -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST
