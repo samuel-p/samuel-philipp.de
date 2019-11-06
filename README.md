@@ -3,3 +3,6 @@
 # samuel-philipp.de
 
 Website for samuel-philipp.de
+
+[GitHub](https://github.com/samuel-p/samuel-philipp.de)
+[GitLab](https://gitlab.com/samuel-p/samuel-philipp.de)
