@@ -1,4 +1,5 @@
-
 RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+Header add Content-Security-Policy "default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self'"
