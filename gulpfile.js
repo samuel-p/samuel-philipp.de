@@ -28,7 +28,7 @@ var paths = {
     copy: {
         input: [
             'src/*.html',
-            'src/.htaccess',
+//            'src/.htaccess',
             'src/{img,font}/**/*',
             'node_modules/@fortawesome/fontawesome-free/*fonts/**/*'
         ],
