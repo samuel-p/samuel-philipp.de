@@ -12,8 +12,10 @@ Website for samuel-philipp.de
 The following Parameters are set directly on the Web-Server.
 
 ```
-Content-Security-Policy: default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'
-Strict-Transport-Security: max-age=63072000; includeSubdomains; preload
+Content-Security-Policy: default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'
+Referrer-Policy: same-origin
+Feature-Policy: sync-xhr 'self'
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 X-Content-Type-Options: nosniff
 X-Frame-Options: DENY
 X-XSS-Protection: 1; mode=block
