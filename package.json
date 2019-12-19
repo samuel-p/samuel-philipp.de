@@ -9,7 +9,7 @@
   "author": "samuel-p",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/samuel-p/samuel-philipp.de"
+    "url": "https://git.sp-codes.de/samuel-p/samuel-philipp.de"
   },
   "devDependencies": {
     "gulp": "4.0.2",
