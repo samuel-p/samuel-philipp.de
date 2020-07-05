@@ -20,7 +20,7 @@
     "lazypipe": "1.0.2",
     "gulp-flatmap": "1.0.2",
     "gulp-header": "2.0.5",
-    "gulp-rename": "1.4.0",
+    "gulp-rename": "2.0.0",
     "gulp-concat": "2.6.1",
     "gulp-terser": "1.2.0",
     "gulp-optimize-js": "1.1.0",
