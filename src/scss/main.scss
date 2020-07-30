@@ -52,6 +52,14 @@ body {
   z-index: 0;
 }
 
+.follow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  z-index: 1;
+}
+
 #developer {
   background-image: url('../img/sp-codes.png');
 }
@@ -132,3 +140,7 @@ body {
   }
 }
 
+.full-size {
+  width: 100%;
+  height: 100%;
+}
