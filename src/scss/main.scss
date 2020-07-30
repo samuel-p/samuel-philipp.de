@@ -18,10 +18,24 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   padding: 0;
   margin: 0;
+}
 
-  &.legal {
+.site-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .content {
+    position: relative;
+    flex: 1 1 auto;
+  }
+
+  .footer {
     background-image: url("../img/bg.png");
-    padding: 2%;
+    color: #ffffff;
+    z-index: 1;
   }
 }
 
@@ -30,12 +44,20 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  position: fixed;
+  position: absolute;
   top: -25px;
   left: -25px;
   width: calc(100% + 50px);
   height: calc(100% + 50px);
   z-index: 0;
+}
+
+.follow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  z-index: 1;
 }
 
 #developer {
@@ -47,7 +69,7 @@ body {
 }
 
 .headers {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -111,19 +133,14 @@ body {
 }
 
 .menu {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.6);
   border-top: 1px solid #ffffff;
-  border-left: 1px solid #ffffff;
-  border-top-left-radius: 8px;
+
+  a {
+    color: #ffffff;
+  }
 }
 
-.menu a {
-  color: #000000;
-}
-
-.menu a:hover {
-  color: #222222;
+.full-size {
+  width: 100%;
+  height: 100%;
 }
