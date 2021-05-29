@@ -28,7 +28,8 @@
     "gulp-sass": "4.1.0",
     "gulp-terser": "2.0.1",
     "lazypipe": "1.0.2",
-    "node-sass-tilde-importer": "^1.0.2"
+    "node-sass-tilde-importer": "^1.0.2",
+    "postcss": "^8.3.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
