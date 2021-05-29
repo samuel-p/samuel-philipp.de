@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "autoprefixer": "10.2.6",
-    "cssnano": "5.0.5",
+    "cssnano": "4.1.11",
     "del": "6.0.0",
     "gulp": "4.0.2",
     "gulp-concat": "2.6.1",
@@ -28,8 +28,7 @@
     "gulp-sass": "4.1.0",
     "gulp-terser": "2.0.1",
     "lazypipe": "1.0.2",
-    "node-sass-tilde-importer": "^1.0.2",
-    "postcss": "^8.2.9"
+    "node-sass-tilde-importer": "^1.0.2"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
