@@ -30,7 +30,7 @@
     "lazypipe": "1.0.2",
     "node-sass": "^7.0.0",
     "node-sass-tilde-importer": "^1.0.2",
-    "postcss": "^8.4.4",
+    "postcss": "^8.4.5",
     "sass": "^1.45.1"
   },
   "dependencies": {
