@@ -15,7 +15,7 @@
     "browser-sync": "^2.27.7"
   },
   "devDependencies": {
-    "autoprefixer": "10.4.0",
+    "autoprefixer": "10.4.2",
     "cssnano": "5.0.14",
     "del": "6.0.0",
     "gulp": "4.0.2",
